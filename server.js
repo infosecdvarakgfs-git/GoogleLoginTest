@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Open / create DB
-const dbFile = path.join(__dirname, 'db', 'database.sqlite');
+const dbFile = path.join(__dirname, 'database.sqlite');
 const db = new sqlite3.Database(dbFile, (err) => {
   if (err) return console.error('DB open error', err);
   console.log('Connected to SQLite DB:', dbFile);
